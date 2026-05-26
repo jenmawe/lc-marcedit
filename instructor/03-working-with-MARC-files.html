@@ -68,7 +68,7 @@
         </ul></div>
     </div>
   </div>
-  <hr></header><nav class="navbar navbar-expand-xl bottom-nav library" aria-label="Main Navigation"><div class="container-fluid nav-container">
+</header><nav class="navbar navbar-expand-xl bottom-nav library" aria-label="Main Navigation"><div class="container-fluid nav-container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Navigation">
       <span class="navbar-toggler-icon"></span>
       <span class="menu-title">Menu</span>
@@ -117,12 +117,8 @@
     -->
     <a id="search-button" class="btn btn-primary" href="../instructor/aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div><!--/div.container-fluid -->
-</nav><aside class="col-md-12 lesson-progress"><div style="width: 12%" class="percentage">
-    12%
-  </div>
-  <div class="progress library">
-    <div class="progress-bar library" role="progressbar" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="12" style="width: 12%">
-    </div>
+</nav><aside class="col-md-12 lesson-progress"><div class="progress library">
+    <div class="progress-bar library" role="progressbar" style="width: 12%" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">12%</div>
   </div>
 </aside><div class="container">
       <div class="row">
@@ -178,7 +174,7 @@
               </div><!--div.sidenav-view-selector -->
             </div><!--/div.col -->
 
-            <hr></div><!--/div.mobile-row -->
+          </div><!--/div.mobile-row -->
 
           <div class="accordion accordion-flush" id="accordion-chapters-toggle">
             <div class="accordion-item">
@@ -250,7 +246,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="05-profiling-your-MARC-data.html">5. Profiling Your MARC data</a>
+        <a href="05-profiling-your-MARC-data.html">5. Profiling your MARC data</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -343,8 +339,8 @@
         <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link" href="../instructor/02-top-level-menu-features.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="../instructor/04-layout-of-the-MarcEditor.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link" href="../instructor/02-top-level-menu-features.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
+        <a class="chapter-link float-end" href="../instructor/04-layout-of-the-MarcEditor.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -357,9 +353,9 @@
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
-      <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
+    </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Working with MARC files</h1>
-        <p>Last updated on 2026-03-19 |
+        <p>Last updated on 2026-05-26 |
 
         <a href="https://github.com/librarycarpentry/lc-marcedit/edit/main/episodes/03-working-with-MARC-files.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -460,7 +456,7 @@ MARC UTF-8 Text File
 mrk8
 </td>
 <td>
-Legacy file format for MARC mnemonic files saved with UTF8 encoding.
+Legacy file format for MARC mnemonic files saved with UTF-8 encoding.
 </td>
 </tr><tr><td>
 MARCXML file
@@ -469,12 +465,12 @@ MARCXML file
 xml
 </td>
 <td>
-A MARC file expressed in the eXtensible Markup format or a text-based
-format for representing structured information.
+A MARC file expressed in the eXtensible Markup Language format or a
+text-based format for representing structured information.
 </td>
 </tr></table><p>To work with a MARC file in the MARCEditor your file needs to be in
-MARC mnemonic format. If you only have a binary file, then that file
-needs to be converted to the mnemonic format.</p>
+MARC mnemonic format (.mrk). If you only have a binary file (.mrc), then
+that file needs to be converted to the mnemonic format.</p>
 </div>
 </div>
 </div>
@@ -496,7 +492,7 @@ binary file.</li>
 <li>JSON to XML: This converts a JSON file to XML.</li>
 <li>XML to JSON: This converts an XML file to JSON.</li>
 </ul><p>The conversions from one encoding standard to another, as in MARC21
-to MARC21XML, rely on eXtensible stylesheets. MarcEdit comes with
+to MARC21XML, rely on extensible stylesheets. MarcEdit comes with
 several default stylesheets which come from those maintained by the
 Library of Congress. If you are familiar with stylesheets, you can also
 create your own.</p>
@@ -510,12 +506,12 @@ create your own.</p>
 <div class="callout-content">
 <p>To ensure the integrity of your data you need to select the correct
 character encoding for your dataset. MarcEdit does not automatically
-detect character encoding, however, UTF8 is set as the default encoding
+detect character encoding, however, UTF-8 is set as the default encoding
 scheme. You can update the encoding scheme when using the MarcBreaker,
-or you can update the default in Preferences → MarEditor → Default
+or you can update the default in Preferences → MarcEditor → Default
 Encoding. For more information on character encoding and translating
 from one encoding to another, see <a href="https://marcedit.reeset.net/learning_marcedit/9-2/dealing-with-character-encodings-in-marcedit/" class="external-link">The
-MarcEdit Field Guide</a></p>
+MarcEdit Field Guide</a>.</p>
 </div>
 </div>
 </div>
@@ -536,7 +532,7 @@ Icon.</li>
 <li>In the MARC Tools window, Select Operation → MARCBreaker.</li>
 <li>In the field, Select Data to Process, click the file folder image to
 the right of the Open box to browse for the sample MARC data file
-(.mrc). Double click the found file to select it.</li>
+(marc_sample_data.mrc). Double click the found file to select it.</li>
 <li>Next, you will need save your file in the MARC mnemonic format
 (.mrk) by clicking the file folder to the right of the Save As box.
 Select the location and name you would like to give your new file.</li>
@@ -545,8 +541,8 @@ encoding.</li>
 <li>Click execute.</li>
 <li>Once you click execute the newly created .mrk file will be available
 to open in the MarcEditor. Under Results at the bottom of the window you
-will see a count of the records in your file. Click Edit Records to open
-the .mrk file in the MarcEditor.</li>
+will see a count of the records in your file (536). Click Edit Records
+to open the .mrk file in the MarcEditor.</li>
 </ol><p><strong>Note:</strong> When you break a .mrc file and create a new
 .mrk file for editing in the MarcEditor, you are making a copy of your
 data in a new file format. As a result, any edits you make to the .mrk
@@ -616,9 +612,9 @@ codes and the subfield text.
 <div class="callout-content">
 <p>Understanding the layout of MARC data in the MarcEditor is key to
 using the program’s tools successfully. For instance, in some tools it
-is important to specify a field’s indicators directly preceeding the
-first subfield. Throughout this workshop we will highlight how different
-tools rely on this syntax to apply edits.</p>
+is important to specify a field’s indicators directly before the first
+subfield. Throughout this workshop we will highlight how different tools
+rely on this syntax to apply edits.</p>
 </div>
 </div>
 </div>
@@ -635,8 +631,8 @@ never tries to load all the records at the same time.</p>
 MarcEditor preferences which can be accessed through the Edit →
 Preferences menu option from the MarcEditor, or through the ‘Settings’
 icon on the opening screen of MarcEdit.</p>
-<p>Within the MarcEditor preferences, you can adjust the font and font
-size within the MarcEditor. You can also set your character encoding
+<p>Within the MarcEditor Preferences, you can adjust the font and font
+size used in the MarcEditor. You can also set your character encoding
 defaults. If you navigate to File Associations within the Preferences
 window, you can select Associate (<code>*.mrc</code>) files with the
 MarcBreaker and Associate (<code>*.mrk</code>) files with the
@@ -689,7 +685,7 @@ episodes.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Note: Some preference updates will force MarcEdit to restart and
 others will not. Also note that in order for some preference changes to
@@ -712,13 +708,12 @@ confused.</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul><li>MarcEdit can work with a variety of file formats</li>
-<li>The MARC Tools Icon allow you to convert data from one file format
+<li>The MARC Tools Icon allows you to convert data from one file format
 to another</li>
-<li>The MarcEditor works with a MarcEdit specific mnemonic format of
-MARC records (.mrk)</li>
-<li>It is necessary to break a MARC binary file to work with that MARC
-data in the MarcEditor. The extension of these easily readable MARC
-files are .mrk rather than the binary extension of .mrc</li>
+<li>The MarcEditor works with an easy-to-read MarcEdit specific mnemonic
+format of MARC records (.mrk). If starting with a MARC binary file
+(.mrc), you must use the MarcBreaker to convert the binary file to a
+mnemonic file.</li>
 <li>Understanding the layout (syntax) of MARC records in the MarcEditor
 is key to working with the records.</li>
 </ul></div>
@@ -763,7 +758,7 @@ is key to working with the records.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/" class="external-link">sandpaper (0.20.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/" class="external-link">varnish (1.1.0)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/" class="external-link">sandpaper (0.20.2)</a>, <a href="https://github.com/carpentries/pegboard/tree/" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/" class="external-link">varnish (1.1.1)</a></p>
 		</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -785,8 +780,8 @@ is key to working with the records.</li>
   "url": "https://librarycarpentry.github.io/lc-marcedit/instructor/03-working-with-MARC-files.html",
   "identifier": "https://librarycarpentry.github.io/lc-marcedit/instructor/03-working-with-MARC-files.html",
   "dateCreated": "2019-08-17",
-  "dateModified": "2026-03-19",
-  "datePublished": "2026-05-19"
+  "dateModified": "2026-05-26",
+  "datePublished": "2026-05-26"
 }
 
   </script><script>
